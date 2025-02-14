@@ -5,9 +5,24 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
 import fonepay from "../assets/fonepay.jpg"
+import { toast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const [selectedPayment, setSelectedPayment] = useState("");
+  const navigate = useNavigate();
+
+// Function to handle "Add to Cart" action
+const handleCheckout = () => {
+  toast({
+    title: "Checkedout Successfully",
+    description: `Thankyou for buying food from us!`,
+    variant: "default", 
+  });
+  navigate("/");
+};
+
   return (
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -179,12 +194,14 @@ const Checkout = () => {
               </div>
             </motion.section>
 
-            <Button size="lg" className="w-full">
+            <Button size="lg" className="w-full" onClick={() => handleCheckout()}>
               Place Order
             </Button>
           </div>
         </div>
       </div>
+      {/* Toast Notifications */}
+      <Toaster />
     </div>
   );
 };

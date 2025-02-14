@@ -105,27 +105,27 @@ const Profile = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" defaultValue="John" />
+                    <Input id="firstName" defaultValue="Sarthak" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" defaultValue="Doe" />
+                    <Input id="lastName" defaultValue="Sharma" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" defaultValue="john@example.com" />
+                  <Input id="email" type="email" defaultValue="sarthaksharma@example.com" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" defaultValue="+977 9876543210" />
+                  <Input id="phone" defaultValue="+977 98XXXXXXXXX" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="address">Default Delivery Address</Label>
-                  <Input id="address" defaultValue="123 Food Street, Thamel, Kathmandu" />
+                  <Input id="address" defaultValue="Thamel, Kathmandu, Nepal" />
                 </div>
 
                 <Button>Save Changes</Button>

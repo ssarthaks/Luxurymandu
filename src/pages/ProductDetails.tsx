@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Minus, Plus } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
 
-  // In a real app, this would fetch from an API
   const product = {
     id: 1,
     name: "Wagyu Steak",
@@ -93,7 +93,7 @@ const ProductDetails = () => {
 
             {/* Add to Cart Button */}
             <Button size="lg" className="w-full">
-              Add to Cart - ${(product.price * quantity).toFixed(2)}
+              <Link to="/cart">Add to Cart - ${(product.price * quantity).toFixed(2)}</Link>
             </Button>
           </motion.div>
         </div>
